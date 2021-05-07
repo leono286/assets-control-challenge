@@ -1,0 +1,88 @@
+:root {
+  --size: 600px;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.layout-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.layout-wrapper .duration-selector {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.layout-wrapper .duration-selector label {
+  cursor: pointer;
+}
+
+.layout-wrapper .duration-selector label + label {
+  margin-top: 8px;
+}
+
+.target {
+  height: var(--size);
+  width: var(--size);
+  border: 1px dotted #01395E;
+  cursor: pointer;
+}
+
+.slider-wrapper {
+  width: 100%;
+  max-width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.slider-wrapper input {
+  width: calc(100% - 150px);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.slider-wrapper input.active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.slider-wrapper .current-value {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+}
+/*# sourceMappingURL=lottie.css.map */
