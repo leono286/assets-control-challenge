@@ -9,14 +9,14 @@ body {
   padding: 0;
   display: -ms-grid;
   display: grid;
-  place-items: center;
+  place-items: start center;
   font-family: 'Poppins', sans-serif;
 }
 
 header {
   -ms-grid-column-align: start;
       justify-self: start;
-  margin-left: 20px;
+  margin: 30px 20px 0;
 }
 
 header h1 {
