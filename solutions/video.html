@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprite - Challenge 4</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <title>Video - Challenge 4</title>
   </head>
-  <link rel="stylesheet" href="css/main.css" type="text/css">
-  <link rel="stylesheet" href="css/sprite.css" type="text/css">
 
   <body>
     <header>
       <h1><a href="./../index.html" aria-label="back"><img src="./assets/img/arrow_back.svg" role="presentation" /></a>
-        Sprite background</h1>
+        Video</h1>
     </header>
     <div class="layout-wrapper">
       <div class="duration-selector">
@@ -24,7 +23,9 @@
         <label><input type="radio" name="duration" value="15000">15 seg </label>
       </div>
       <div class="animation">
-        <div class="target"></div>
+        <div class="target">
+          <video src="./assets/video/Circle_SafetyCenter.mp4" loop preload="metadata"></video>
+        </div>
         <div class="slider-wrapper">
           <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
           <span class="current-value"><span class="value">0</span> %</span>
@@ -32,7 +33,7 @@
       </div>
 
     </div>
-    <script src="js/sprite.js"></script>
+    <script src="js/video.js"></script>
   </body>
 
 </html>

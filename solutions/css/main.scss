@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --size: 600px;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  justify-self: start;
+
+  margin: {
+    left: 20px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+    background: #3DDB83;
+    border-radius: 4px;
+    vertical-align: sub;
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+
+    &:hover {
+      img {
+        animation-name: slide-in-out;
+      }
+    }
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    padding: 6px;
+    animation: none .4s ease-in-out;
+  }
+
+}
+
+.layout-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .duration-selector {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    label {
+      cursor: pointer;
+    }
+
+    label+label {
+      margin-top: 8px;
+    }
+  }
+}
+
+.target {
+  height: var(--size);
+  width: var(--size);
+  cursor: pointer;
+  animation: none 0.2s;
+
+  &:hover {
+    animation-name: pulse;
+  }
+}
+
+.slider-wrapper {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+  input {
+    width: calc(100% - 150px);
+    cursor: grab;
+
+    &.active {
+      cursor: grabbing;
+    }
+  }
+
+  .current-value {
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+  }
+}
+
+@keyframes slide-in-out {
+  15% {
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  41% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+
+  85% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.01);
+    opacity: 0.85;
+  }
+}
