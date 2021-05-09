@@ -1,0 +1,70 @@
+.target {
+  position: relative;
+}
+
+.target.loading .jsgif {
+  -webkit-filter: grayscale(90%) blur(6px) opacity(0.2);
+          filter: grayscale(90%) blur(6px) opacity(0.2);
+}
+
+.layout-wrapper .duration-selector {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.25;
+}
+
+.layout-wrapper .duration-selector label {
+  cursor: not-allowed;
+}
+
+.lds-dual-ring {
+  display: none;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.loading .lds-dual-ring {
+  display: inline-block;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--green);
+  border-color: var(--green) transparent var(--green) transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=gif.css.map */

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 :root {
   --size: 600px;
+  --green: #3DDB83;
 }
 
 body {
@@ -25,7 +26,7 @@ header h1 {
 
 header a {
   display: inline-block;
-  background: #3DDB83;
+  background: var(--green);
   border-radius: 4px;
   vertical-align: sub;
   width: 36px;

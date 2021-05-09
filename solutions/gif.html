@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gif - Challenge 4</title>
+  </head>
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  <link rel="stylesheet" href="css/gif.css" type="text/css">
+
+  <body>
+    <header>
+      <h1><a href="./../index.html" aria-label="back"><img src="./assets/img/arrow_back.svg" role="presentation" /></a>
+        Gif</h1>
+    </header>
+    <div class="layout-wrapper">
+      <div class="duration-selector">
+        <h3>Select duration</h3>
+        <label><input type="radio" name="duration" value="2000" disabled>2 seg </label>
+        <label><input type="radio" name="duration" value="5000" disabled>5 seg </label>
+        <label><input type="radio" name="duration" value="10000" disabled>10 seg </label>
+        <label><input type="radio" name="duration" value="15000" disabled>15 seg </label>
+      </div>
+      <div class="animation">
+        <div class="target loading">
+          <div class="lds-dual-ring"></div>
+          <img src="./assets/img/Circle_SafetyC.gif" rel:animated_src="./assets/img/Circle_SafetyC.gif" width="600" height="600" />
+        </div>
+        <div class="slider-wrapper">
+          <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+          <span class="current-value"><span class="value">0</span> %</span>
+        </div>
+      </div>
+
+    </div>
+    <script src="./js/libgif.js"></script>
+    <script src="js/gif.js"></script>
+  </body>
+
+</html>
